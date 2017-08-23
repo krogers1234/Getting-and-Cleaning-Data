@@ -26,6 +26,6 @@ tidyDataSet <- cbind(s, y, x)
 p <- tidyDataSet[, 3:dim(tidyDataSet)[2]] 
 tidyDataAVGSet <- aggregate(p,list(tidyDataSet$Subject, tidyDataSet$Activity), mean)
 names(tidyDataAVGSet) <- "Subject"
-names(tidyDataAVGSet) <- "Activity"# Created csv (tidy data set) in directory
+names(tidyDataAVGSet) <- "Activity"
 write.table(tidyDataSet, tidyDataFile, row.name=FALSE)
 write.table(tidyDataAVGSet, tidyDataFileAVGtxt, row.name=FALSE)
