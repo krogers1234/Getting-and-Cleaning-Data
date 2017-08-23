@@ -49,3 +49,4 @@ activities <- read.table("C:/Users/krogers1/Documents/R/UCI HAR Dataset/activity
 p <- tidyDataSet[, 3:dim(tidyDataSet)[2]] tidyDataAVGSet <- aggregate(p,list(tidyDataSet$Subject, tidyDataSet$Activity), mean)names(tidyDataAVGSet)[1] <- "Subject"names(tidyDataAVGSet)[2] <- "Activity"# Created csv (tidy data set) in directorywrite.table(tidyDataSet, tidyDataFile, row.name=FALSE)write.table(tidyDataAVGSet, tidyDataFileAVGtxt, row.name=FALSE)
 
 
+
